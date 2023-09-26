@@ -25,21 +25,31 @@ const Detail = ({ exerciseDetail }) => {
 
   return (
     <Stack
-      gap="60px"
-      sx={{ flexDirection: { lg: "row" }, p: "20px", alignItems: "center" }}
+      gap={{ xs: "2rem", lg: "6vh" }} // Adjust gap for different screen sizes
+      sx={{
+        flexDirection: { xs: "column", lg: "row" },
+        p: "2vw",
+        alignItems: "center",
+      }}
     >
-      <img src={gifUrl} alt={name} loading="lazy" className="detail-image" />
-      <Stack sx={{ gap: { lg: "35px", xs: "20px" } }}>
+      <img
+        src={gifUrl}
+        alt={name}
+        loading="lazy"
+        className="detail-image"
+        style={{ width: "40vw", height: "40vw", maxWidth: "100%" }} // Make sure image doesn't exceed container width
+      />
+      <Stack sx={{ gap: { lg: "3vh", xs: "2vh" } }}>
         <Typography
-          sx={{ fontSize: { lg: "64px", xs: "30px" } }}
+          sx={{ fontSize: { xs: "3rem", lg: "4rem" } }} // Adjust font size for different screen sizes
           fontWeight={700}
           textTransform="capitalize"
         >
           {name}
         </Typography>
         <Typography
-          sx={{ fontSize: { lg: "24px", xs: "18px" } }}
-          color="#4F4C4C"
+          sx={{ fontSize: { xs: "1.5rem", lg: "2rem" } }} // Adjust font size for different screen sizes
+          color="#dec0bf"
         >
           Exercises keep you strong.{" "}
           <span style={{ textTransform: "capitalize" }}>{name}</span> bup is one
@@ -47,24 +57,26 @@ const Detail = ({ exerciseDetail }) => {
           improve your <br /> mood and gain energy.
         </Typography>
         {extraDetail?.map((item) => (
-          <Stack key={item.name} direction="row" gap="24px" alignItems="center">
+          <Stack key={item.name} direction="row" gap="2vw" alignItems="center">
             <Button
               sx={{
                 background: "#FFF2DB",
                 borderRadius: "50%",
-                width: "100px",
-                height: "100px",
+                width: "10vw",
+                height: "10vw",
+                minWidth: "60px", // Ensure a minimum size for the button
+                minHeight: "60px", // Ensure a minimum size for the button
               }}
             >
               <img
                 src={item.icon}
                 alt={bodyPart}
-                style={{ width: "50px", height: "50px" }}
+                style={{ width: "5vw", height: "5vw", maxWidth: "100%" }} // Make sure image doesn't exceed button size
               />
             </Button>
             <Typography
               textTransform="capitalize"
-              sx={{ fontSize: { lg: "30px", xs: "20px" } }}
+              sx={{ fontSize: { xs: "2rem", lg: "3rem" } }} // Adjust font size for different screen sizes
             >
               {item.name}
             </Typography>

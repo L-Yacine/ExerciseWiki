@@ -12,6 +12,7 @@ const ExerciseDetail = () => {
   const [exerciseVideos, setExerciseVideos] = useState([]);
   const [targetMuscleExercises, setTargetMuscleExercises] = useState([]);
   const [equipmentExercises, setEquipmentExercises] = useState([]);
+  const [isLargeScreen, setIsLargeScreen] = useState(true); // Initialize as true for larger screens
   const { id } = useParams();
 
   useEffect(() => {
@@ -50,10 +51,34 @@ const ExerciseDetail = () => {
     fetchExercisesData();
   }, [id]);
 
+  useEffect(() => {
+    // Use useMediaQuery to set isLargeScreen state based on screen size
+    const mediaQuery = window.matchMedia("(min-width: 960px)");
+    setIsLargeScreen(mediaQuery.matches);
+
+    // Add event listener to update isLargeScreen state when screen size changes
+    const handleResize = (e) => {
+      setIsLargeScreen(e.matches);
+    };
+    mediaQuery.addEventListener("change", handleResize);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      mediaQuery.removeEventListener("change", handleResize);
+    };
+  }, []);
+
   if (!exerciseDetail) return <div>No Data</div>;
 
   return (
-    <Box sx={{ mt: { lg: "96px", xs: "60px" } }}>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        gap: isLargeScreen ? "20rem" : "2rem",
+        mt: { lg: "12vh", xs: "10vh" },
+      }}
+    >
       <Detail exerciseDetail={exerciseDetail} />
       <ExerciseVideos
         exerciseVideos={exerciseVideos}

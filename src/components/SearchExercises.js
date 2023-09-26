@@ -36,7 +36,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
           item.bodyPart.toLowerCase().includes(search)
       );
 
-      window.scrollTo({ top: 1800, left: 100, behavior: "smooth" });
+      window.scrollTo({ top: "100vh", left: "0", behavior: "smooth" });
 
       setSearch("");
       setExercises(searchedExercises);
@@ -44,16 +44,16 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
   };
 
   return (
-    <Stack alignItems="center" mt="37px" justifyContent="center" p="20px">
+    <Stack alignItems="center" mt={5} justifyContent="center" p={2}>
       <Typography
         fontWeight={700}
         sx={{ fontSize: { lg: "44px", xs: "30px" } }}
-        mb="49px"
+        mb={6}
         textAlign="center"
       >
         Awesome Exercises You <br /> Should Know
       </Typography>
-      <Box position="relative" mb="72px">
+      <Box position="relative" mb={9}>
         <TextField
           height="76px"
           sx={{
@@ -84,7 +84,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
           Search
         </Button>
       </Box>
-      <Box sx={{ position: "relative", width: "100%", p: "20px" }}>
+      <Box sx={{ position: "relative", width: "100%", p: 2 }}>
         <HorizontalScrollbar
           data={bodyParts}
           bodyParts

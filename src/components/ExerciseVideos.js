@@ -6,12 +6,12 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
   if (!exerciseVideos.length) return <Loader />;
 
   return (
-    <Box sx={{ marginTop: { lg: "203px", xs: "20px" } }} p="20px">
+    <Box sx={{ marginTop: { lg: "20vh", xs: "5vh" } }} p="2vw">
       <Typography
-        sx={{ fontSize: { lg: "44px", xs: "25px" } }}
+        sx={{ fontSize: { lg: "4rem", xs: "2.5rem" } }}
         fontWeight={700}
-        color="#000"
-        mb="33px"
+        color="#dec0bf"
+        mb="3vh"
       >
         Watch{" "}
         <span style={{ color: "#FF2625", textTransform: "capitalize" }}>
@@ -20,33 +20,42 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
         exercise videos
       </Typography>
       <Stack
-        sx={{ flexDirection: { lg: "row" }, gap: { lg: "110px", xs: "0px" } }}
-        justifyContent="flex-start"
+        sx={{
+          flexDirection: { lg: "row" },
+          gap: { lg: "25vw", xs: "0px" },
+          justifyContent: "flex-start",
+        }}
         flexWrap="wrap"
         alignItems="center"
+        justifyContent="center"
       >
-        {exerciseVideos?.slice(0, 3)?.map((item, index) => (
+        {exerciseVideos?.slice(0, 4)?.map((item, index) => (
           <a
             key={index}
             className="exercise-video"
             href={`https://www.youtube.com/watch?v=${item.video.videoId}`}
             target="_blank"
             rel="noreferrer"
+            style={{ width: "30vw", height: "30vh" }}
           >
             <img
-              style={{ borderTopLeftRadius: "20px" }}
+              style={{
+                borderTopLeftRadius: "2vw",
+                width: "100%",
+                height: "auto",
+              }}
               src={item.video.thumbnails[0].url}
               alt={item.video.title}
             />
             <Box>
               <Typography
-                sx={{ fontSize: { lg: "28px", xs: "18px" } }}
+                sx={{ fontSize: { lg: "2.5rem", xs: "1.5rem" } }}
                 fontWeight={600}
-                color="#000"
+                color="#dec0bf"
               >
                 {item.video.title}
               </Typography>
-              <Typography fontSize="14px" color="#000">
+              <Typography fontSize="1.5rem" color="#000">
                 {item.video.channelName}
               </Typography>
             </Box>

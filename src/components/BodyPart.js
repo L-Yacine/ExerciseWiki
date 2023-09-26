@@ -12,22 +12,22 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => (
       bodyPart === item
         ? {
             borderTop: "4px solid #FF2625",
-            background: "#be2596",
-            borderRadius: "30px",
-            width: "270px",
-            height: "282px",
+            background: "#fff",
+            borderBottomLeftRadius: "20px",
+            width: "100%", // Use 100% width for responsiveness
+            height: "auto", // Allow height to adjust based on content
             cursor: "pointer",
-            gap: "47px",
-            backdropFilter: "blur(10px)",
+            gap: "2rem", // Use MUI spacing unit for gap
+            padding: "1rem", // Add padding for spacing
           }
         : {
-            background: "#be2596",
-            borderRadius: "30px",
-            width: "270px",
-            height: "282px",
+            background: "#fff",
+            borderBottomLeftRadius: "20px",
+            width: "100%", // Use 100% width for responsiveness
+            height: "auto", // Allow height to adjust based on content
             cursor: "pointer",
-            gap: "47px",
-            backdropFilter: "blur(10px)",
+            gap: "2rem", // Use MUI spacing unit for gap
+            padding: "1rem", // Add padding for spacing
           }
     }
     onClick={() => {
@@ -35,12 +35,21 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => (
       window.scrollTo({ top: 1800, left: 100, behavior: "smooth" });
     }}
   >
-    <img src={Icon} alt="dumbbell" style={{ width: "40px", height: "40px" }} />
+    <img
+      src={Icon}
+      alt="dumbbell"
+      style={{
+        width: "40px",
+        height: "40px",
+        maxWidth: "100%", // Make sure the image doesn't exceed its container
+        height: "auto", // Allow the image to adjust its height
+      }}
+    />
     <Typography
-      fontSize="24px"
+      fontSize="1.5rem" // Use relative font size units like "rem" for responsiveness
       fontWeight="bold"
       fontFamily="Alegreya"
-      color="#FF2625"
+      color="#3A1212"
       textTransform="capitalize"
     >
       {" "}

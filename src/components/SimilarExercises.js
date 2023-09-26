@@ -5,15 +5,15 @@ import HorizontalScrollbar from "./HorizontalScrollbar";
 import Loader from "./Loader";
 
 const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }) => (
-  <Box sx={{ mt: { lg: "100px", xs: "0px" } }}>
+  <Box sx={{ mt: { lg: "12vh", xs: "0" } }}>
     <Typography
-      sx={{ fontSize: { lg: "44px", xs: "25px" }, ml: "20px" }}
+      sx={{ fontSize: { lg: "44px", xs: "25px" }, ml: 2 }}
       fontWeight={700}
-      color="#000"
-      mb="33px"
+      color="#fff"
+      mb={4}
     >
       Similar{" "}
-      <span style={{ color: "#FF2625", textTransform: "capitalize" }}>
+      <span style={{ color: "#FF6347", textTransform: "capitalize" }}>
         Target Muscle
       </span>{" "}
       exercises
@@ -28,15 +28,15 @@ const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }) => (
     <Typography
       sx={{
         fontSize: { lg: "44px", xs: "25px" },
-        ml: "20px",
-        mt: { lg: "100px", xs: "60px" },
+        ml: 2,
+        mt: { lg: "12vh", xs: "7vh" },
       }}
       fontWeight={700}
-      color="#000"
-      mb="33px"
+      color="#fff"
+      mb={4}
     >
       Similar{" "}
-      <span style={{ color: "#FF2625", textTransform: "capitalize" }}>
+      <span style={{ color: "#FF6347", textTransform: "capitalize" }}>
         Equipment
       </span>{" "}
       exercises
