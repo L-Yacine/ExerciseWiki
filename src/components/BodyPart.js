@@ -11,8 +11,7 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => (
     sx={
       bodyPart === item
         ? {
-            borderTop: "4px solid #FF2625",
-            background: "#fff",
+            borderTop: `4px solid #FF4500`, // Highlight color for border
             borderBottomLeftRadius: "20px",
             width: "100%", // Use 100% width for responsiveness
             height: "auto", // Allow height to adjust based on content
@@ -21,7 +20,6 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => (
             padding: "1rem", // Add padding for spacing
           }
         : {
-            background: "#fff",
             borderBottomLeftRadius: "20px",
             width: "100%", // Use 100% width for responsiveness
             height: "auto", // Allow height to adjust based on content
@@ -40,7 +38,7 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => (
       alt="dumbbell"
       style={{
         width: "40px",
-        height: "40px",
+
         maxWidth: "100%", // Make sure the image doesn't exceed its container
         height: "auto", // Allow the image to adjust its height
       }}
@@ -48,8 +46,7 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => (
     <Typography
       fontSize="1.5rem" // Use relative font size units like "rem" for responsiveness
       fontWeight="bold"
-      fontFamily="Alegreya"
-      color="#3A1212"
+      color="#FFF8DC" // Secondary color for text
       textTransform="capitalize"
     >
       {" "}

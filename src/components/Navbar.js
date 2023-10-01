@@ -30,7 +30,6 @@ const Navbar = () => {
   return (
     <Stack
       direction={{ xs: "column", sm: "row" }}
-      justifyContent="space-evenly"
       alignItems="center" // Center align items in both mobile and desktop view
       sx={{
         gap: { sm: "2rem", xs: "1rem" },
@@ -41,74 +40,85 @@ const Navbar = () => {
     >
       <Box // Add a Box component for layout
         display="flex" // Display children horizontally
-        alignItems="center" // Center align items horizontally
+        alignItems="center"
+        justifyContent="space-between"
+        width="70%"
+        mx="auto"
       >
         <Link
           to="/"
           style={{
             display: "flex",
             alignItems: "center",
+            marginRight: "5rem",
             textDecoration: "none",
+
+            justifySelf: "start",
           }}
         >
           <img
             src={Logo}
             alt="logo"
             style={{
-              width: "3rem",
+              width: "5rem",
               height: "3rem",
-              marginRight: "1rem",
+              marginRight: "0.5rem",
+              marginLeft: "1rem",
             }}
           />
           <Typography
+            fontWeight="bold"
             variant="h4"
             style={{
-              fontSize: "1.5rem",
+              fontSize: "1.1rem",
               color: "#ffdede",
-              marginTop: "0.2rem",
+              marginTop: "0.5rem",
             }}
           >
-            Exercise-wiki
+            FIT-WIKI
           </Typography>
         </Link>
+        {/* Conditionally render mobile menu button */}
+        {isMobile && (
+          <IconButton
+            edge="end"
+            color="inherit"
+            aria-label="menu"
+            onClick={toggleMobileMenu}
+            sx={{ display: { sm: "none" } }}
+          >
+            <MenuIcon />
+          </IconButton>
+        )}
+
+        {/* Conditionally render mobile menu drawer */}
+        {isMobile && (
+          <Drawer
+            anchor="right"
+            open={mobileMenuOpen}
+            onClose={toggleMobileMenu}
+          >
+            <List>
+              <ListItem
+                ListItemButton
+                component={Link}
+                to="/"
+                onClick={toggleMobileMenu}
+              >
+                <ListItemText primary="Home" />
+              </ListItem>
+              <ListItem
+                ListItemButton
+                component="a"
+                href="#exercises"
+                onClick={toggleMobileMenu}
+              >
+                <ListItemText primary="Exercises" />
+              </ListItem>
+            </List>
+          </Drawer>
+        )}
       </Box>
-
-      {/* Conditionally render mobile menu button */}
-      {isMobile && (
-        <IconButton
-          edge="end"
-          color="inherit"
-          aria-label="menu"
-          onClick={toggleMobileMenu}
-          sx={{ display: { sm: "none" } }}
-        >
-          <MenuIcon />
-        </IconButton>
-      )}
-
-      {/* Conditionally render mobile menu drawer */}
-      {isMobile && (
-        <Drawer anchor="right" open={mobileMenuOpen} onClose={toggleMobileMenu}>
-          <List>
-            <ListItem
-              ListItemButton
-              component={Link}
-              to="/"
-              onClick={toggleMobileMenu}
-            >
-              <ListItemText primary="Home" />
-            </ListItem>
-            <ListItem
-              ListItemButton
-              component="a"
-              href="#exercises"
-              onClick={toggleMobileMenu}
-            >
-              <ListItemText primary="Exercises" />
-            </ListItem>
-          </List>
-        </Drawer>
-      )}
 
       {/* Conditionally render desktop navigation */}
       {!isMobile && (
