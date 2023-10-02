@@ -1,9 +1,8 @@
 /* Reset and Global Styles */
 body {
   font-family: "Josefin Sans";
-  background: linear-gradient(to right, #0d1b2a, #1b263b);
-  color: #e0e1dd;
-  margin: 0;
+  background: linear-gradient(to right, #f58529, #dd2a7b, #8134af, #515bd4);
+  color: #ffffff;
 }
 
 * {
@@ -76,7 +75,7 @@ body {
   width: 100%; /* Make it responsive */
   max-width: 400px; /* Set a maximum width */
   height: auto; /* Allow the height to adjust proportionally */
-  background: #fff;
+  background: #ffffff41;
   border-top: 4px solid #d3d3d3;
   border-radius: 50px;
   text-decoration: none;
@@ -87,11 +86,13 @@ body {
   transform: scale(1, 1);
   transition: 0.3s all ease-in-out;
   backdrop-filter: blur(10px);
+  outline: 2px solid #ff8c00;
 }
 
 .exercise-card img {
   width: 100%; /* Make the image responsive */
   height: auto;
+  border-radius: 50px;
 }
 
 /* Body Part Card Styles */
