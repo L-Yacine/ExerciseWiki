@@ -1,7 +1,7 @@
 /* Reset and Global Styles */
 body {
   font-family: "Josefin Sans";
-  background: linear-gradient(to right, #f58529, #dd2a7b, #8134af, #515bd4);
+  background: linear-gradient(to right, #ffca9e, #d3c87e, #ff7c7c);
   color: #ffffff;
 }
 
@@ -75,8 +75,8 @@ body {
   width: 100%; /* Make it responsive */
   max-width: 400px; /* Set a maximum width */
   height: auto; /* Allow the height to adjust proportionally */
-  background: #ffffff41;
-  border-top: 4px solid #d3d3d3;
+  background: #ffffff2e;
+
   border-radius: 50px;
   text-decoration: none;
   display: flex;
@@ -85,8 +85,7 @@ body {
   padding-bottom: 10px;
   transform: scale(1, 1);
   transition: 0.3s all ease-in-out;
-  backdrop-filter: blur(10px);
-  outline: 2px solid #ff8c00;
+  outline: 2px solid #ae00ff;
 }
 
 .exercise-card img {
@@ -142,13 +141,7 @@ body {
     position: static !important; /* Remove absolute positioning */
   }
   .hero-banner-img {
-    position: absolute;
-    left: 30%; /* Adjust the position for responsiveness */
-    top: -110px;
-    z-index: -1;
-    height: 175vw;
-
-    opacity: 0.8; /* Hide the image */
+    display: none;
   }
   .exercise-card {
     width: 100%; /* Make it responsive */

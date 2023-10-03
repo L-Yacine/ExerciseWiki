@@ -10,7 +10,7 @@ const ExerciseCard = ({ exercise }) => (
         sx={{
           ml: "1.3em",
           color: "#FFF8DC", // Secondary color
-          background: "#FFA500", // Accent color
+          background: "#363636", // Accent color
           fontSize: "1rem",
           borderRadius: "20px",
           textTransform: "capitalize",
@@ -24,7 +24,7 @@ const ExerciseCard = ({ exercise }) => (
         sx={{
           ml: "1.3em",
           color: "#FFF8DC", // Secondary color
-          background: "#FFA500", // Accent color
+          background: "#363636", // Accent color
           fontSize: "0.875rem",
           borderRadius: "20px",
           textTransform: "capitalize",
@@ -37,7 +37,7 @@ const ExerciseCard = ({ exercise }) => (
     </Stack>
     <Typography
       ml="1.3em"
-      color="#FFF8DC" // Secondary color
+      color="#363636" // Secondary color
       fontWeight="bold"
       sx={{ fontSize: { lg: "1.5rem", xs: "1.25rem" } }}
       mt="0.6875em"
@@ -45,6 +45,10 @@ const ExerciseCard = ({ exercise }) => (
       textTransform="capitalize"
     >
       {exercise.name}
+      <br />
+      <Typography sx={{ fontSize: { lg: "1rem", xs: "0.75rem" } }}>
+        See details...
+      </Typography>
     </Typography>
   </Link>
 );
