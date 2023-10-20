@@ -44,9 +44,9 @@ const HeroBanner = () => (
         href="#exercises"
         style={{
           opacity: "80%",
-          marginTop: "3vh",
+
           textDecoration: "none",
-          width: "30vw",
+          width: "40vw",
           textAlign: "center",
           background: "#FFA500", // Accent color
           padding: "1vh",

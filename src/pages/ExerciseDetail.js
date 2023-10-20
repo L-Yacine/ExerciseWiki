@@ -75,7 +75,7 @@ const ExerciseDetail = () => {
       sx={{
         display: "flex",
         flexDirection: "column",
-        gap: isLargeScreen ? "20rem" : "2rem",
+        gap: isLargeScreen ? "2rem" : "2rem",
         mt: { lg: "12vh", xs: "10vh" },
       }}
     >

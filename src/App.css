@@ -1,7 +1,7 @@
 /* Reset and Global Styles */
 body {
   font-family: "Josefin Sans";
-  background: linear-gradient(to right, #ffca9e, #d3c87e, #ff7c7c);
+  background: linear-gradient(to right, #b09f92, #b7ae70, #ff7c7c);
   color: #ffffff;
 }
 
@@ -9,6 +9,7 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  /* outline: 2px solid blue; */
 }
 
 /* Scrollbar Styles */
@@ -73,11 +74,12 @@ body {
 /* Exercise Card Styles */
 .exercise-card {
   width: 100%; /* Make it responsive */
-  max-width: 400px; /* Set a maximum width */
+  min-width: 35vw;
+  max-width: 60vw; /* Set a maximum width */
   height: auto; /* Allow the height to adjust proportionally */
   background: #ffffff2e;
 
-  border-radius: 50px;
+  border-radius: 15px;
   text-decoration: none;
   display: flex;
   justify-content: space-between;
@@ -91,7 +93,7 @@ body {
 .exercise-card img {
   width: 100%; /* Make the image responsive */
   height: auto;
-  border-radius: 50px;
+  border-radius: 10px;
 }
 
 /* Body Part Card Styles */
@@ -116,11 +118,28 @@ body {
 .exercise-video {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  width: 100%; /* Make it responsive */
-  max-width: 387px; /* Set a maximum width */
-  height: auto; /* Allow the height to adjust proportionally */
+  gap: 1rem;
+  width: 100%;
+  max-width: 387px;
   text-decoration: none;
+  background: #ffffff2e;
+  border-radius: 20px;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  outline: 2px solid #ff0000;
+}
+
+.exercise-video img {
+  width: 100%; /* Make the image responsive */
+  height: auto;
+}
+
+.video-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
 }
 
 /* Media Queries */
@@ -171,6 +190,6 @@ body {
 
 .scroll-content {
   display: inline-block;
-  margin-right: 20px; /* Adjust as needed to create spacing between items */
+  margin-right: 3rem; /* Adjust as needed to create spacing between items */
   white-space: normal; /* Allow text to wrap if needed */
 }

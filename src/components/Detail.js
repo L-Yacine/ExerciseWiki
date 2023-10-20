@@ -25,7 +25,7 @@ const Detail = ({ exerciseDetail }) => {
 
   return (
     <Stack
-      gap={{ xs: "2rem", lg: "6vh" }} // Adjust gap for different screen sizes
+      gap={{ xs: "2rem", lg: "6vh" }} // Adjusting gap for different screen sizes
       sx={{
         flexDirection: { xs: "column", lg: "row" },
         p: "2vw",
@@ -37,11 +37,15 @@ const Detail = ({ exerciseDetail }) => {
         alt={name}
         loading="lazy"
         className="detail-image"
-        style={{ width: "40vw", height: "40vw", maxWidth: "100%" }} // Make sure image doesn't exceed container width
+        style={{
+          width: "40vw",
+          height: "40vw",
+          maxWidth: "100%",
+        }}
       />
       <Stack sx={{ gap: { lg: "3vh", xs: "2vh" } }}>
         <Typography
-          sx={{ fontSize: { xs: "3rem", lg: "4rem" } }} // Adjust font size for different screen sizes
+          sx={{ fontSize: { xs: "3rem", lg: "4rem" } }}
           fontWeight={700}
           textTransform="capitalize"
         >
@@ -49,7 +53,7 @@ const Detail = ({ exerciseDetail }) => {
         </Typography>
         <Typography
           sx={{ fontSize: { xs: "1.5rem", lg: "2rem" } }} // Adjust font size for different screen sizes
-          color="#dec0bf"
+          color="#e6dccc"
         >
           Exercises keep you strong.{" "}
           <span style={{ textTransform: "capitalize" }}>{name}</span> bup is one
@@ -65,7 +69,7 @@ const Detail = ({ exerciseDetail }) => {
                 width: "10vw",
                 height: "10vw",
                 minWidth: "60px", // Ensure a minimum size for the button
-                minHeight: "60px", // Ensure a minimum size for the button
+                minHeight: "60px",
               }}
             >
               <img
